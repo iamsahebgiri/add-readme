@@ -1,0 +1,36 @@
+{
+  "name": "create-readme-md",
+  "version": "1.0.0",
+  "description": "✨ Create beautiful readme with just one CLI command!",
+  "main": "src/index.js",
+  "bin": "src/index.js",
+  "scripts": {
+    "lint": "eslint src/",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamsahebgiri/create-readme-md.git"
+  },
+  "keywords": [
+    "CLI",
+    "README",
+    "CRM"
+  ],
+  "author": "Saheb Giri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamsahebgiri/create-readme-md/issues"
+  },
+  "homepage": "https://github.com/iamsahebgiri/create-readme-md#readme",
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.0"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "inquirer": "^8.0.0",
+    "remote-origin-url": "^2.0.0"
+  }
+}
