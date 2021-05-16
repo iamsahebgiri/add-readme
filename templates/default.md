@@ -6,7 +6,7 @@
 <h1 align="center"><%= projectName %></h1>
 
 <div align="center">
-  Here goes the short concise description
+<%= projectDescription %>
 </div>
 
 <br />
@@ -16,7 +16,9 @@
     <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square"
       alt="Standard" />
   </a>
+  
   <img src="https://img.shields.io/github/languages/code-size/<%= projectRepo %>?style=flat-square" alt="Code size" />
+
   <img src="https://img.shields.io/github/license/<%= projectRepo %>?style=flat-square" alt="License" />
 
   <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/<%= projectRepo %>?style=flat-square">
