@@ -12,7 +12,7 @@
       alt="Standard" />
   </a>
   <img src="https://img.shields.io/github/languages/code-size/iamsahebgiri/add-readme?style=flat-square" alt="Code size" />
-  
+
   <img src="https://img.shields.io/github/license/iamsahebgiri/add-readme?style=flat-square" alt="License" />
 
   <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/iamsahebgiri/add-readme?style=flat-square">
@@ -45,7 +45,6 @@ npx add-readme
 
 - [jonschlinkert](https://github.com/jonschlinkert/is-git-url)
 - [alferov](https://github.com/alferov/is-github-url)
-)
 
 ## 📚️ Roadmaps
 
