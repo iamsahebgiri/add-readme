@@ -37,7 +37,7 @@ inquirer
   ])
   .then((answers) => {
     try {
-      const data = fs.readFileSync('./templates/default.md', 'utf8');
+      const data = fs.readFileSync(path.resolve(__dirname, '../templates/default.md'), 'utf8');
       const { owner, name, repo } = parseGithubUrl(answers.githubURL);
       const output = ejs.render(data, {
         projectAuthor: answers.authorName,
