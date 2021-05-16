@@ -1,4 +1,4 @@
-<h1 align="center">Create Readme MD</h1>
+<h1 align="center">Add Readme</h1>
 
 <div align="center">
   ✨ Create beautiful readme with just one CLI command!
@@ -11,12 +11,13 @@
     <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square"
       alt="Standard" />
   </a>
-  <img src="https://img.shields.io/github/languages/code-size/iamsahebgiri/create-readme-md?style=flat-square" alt="Code size" />
-  <img src="https://img.shields.io/github/license/iamsahebgiri/create-readme-md?style=flat-square" alt="License" />
+  <img src="https://img.shields.io/github/languages/code-size/iamsahebgiri/add-readme?style=flat-square" alt="Code size" />
+  
+  <img src="https://img.shields.io/github/license/iamsahebgiri/add-readme?style=flat-square" alt="License" />
 
-  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/iamsahebgiri/create-readme-md?style=flat-square">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/iamsahebgiri/add-readme?style=flat-square">
 
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/iamsahebgiri/create-readme-md?style=social">
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/iamsahebgiri/add-readme?style=social">
 </div>
 
 ## ⚡️ Introduction
@@ -37,13 +38,13 @@ Download [Node.js](https://nodejs.org/en/download/).
 Run this followed commands:
 
 ```bash
-npx create-readme-md
+npx add-readme
 ```
 
 ## 🌱 Acknoledgement
 
 - [jonschlinkert](https://github.com/jonschlinkert/is-git-url)
-- [alferov](https://github.com/alferov/is-github-url
+- [alferov](https://github.com/alferov/is-github-url)
 )
 
 ## 📚️ Roadmaps
