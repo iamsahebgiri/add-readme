@@ -26,6 +26,8 @@
 ## ⚡️ Introduction
 CLI that generates beautiful designed `README.md` file with ease. Build to be fast and ease of use with very little keystrokes.
 
+**Note:** Having a remote git URL in your project makes it even faster and less tedious.
+
 ## 🎯 Features
 
 List of features
