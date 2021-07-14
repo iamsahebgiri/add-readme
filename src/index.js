@@ -53,7 +53,7 @@ try {
 
   const output = ejs.render(template, data);
 
-  fs.writeFileSync('PREVIEW.md', output, { flag: 'a+' });
+  fs.writeFileSync('README.md', output, { flag: 'a+' });
   console.log('🚀️ README created successfully!');
 } catch (err) {
   console.log(err);
