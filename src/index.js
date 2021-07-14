@@ -1,59 +1,60 @@
 #! /usr/bin/env node
 
-const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
 const ejs = require('ejs');
 const origin = require('remote-origin-url');
-
-const isGitUrl = require('../utils/isGitUrl');
 const parseGithubUrl = require('../utils/parseGithubUrl');
 
-// eslint-disable-next-line import/no-dynamic-require
-const packageJSON = require(path.join(process.cwd(), 'package.json'));
+let data = {
+  name: 'Hey',
+  author: 'John Doe',
+  username: 'johndoe',
+  githubUrl: 'https://github.com/johndoe/example',
+  repo: 'johndoe/example',
+  description: 'Another awesome project to make the world a better place.',
+  license: 'MIT',
+  year: new Date().getFullYear(),
+};
 
-inquirer
-  .prompt([
-    {
-      type: 'input',
-      name: 'authorName',
-      message: "What's your full name? ",
-      default: packageJSON.author,
-    },
-    {
-      type: 'input',
-      name: 'githubURL',
-      message: 'Enter your github repository URL',
-      default: origin.sync(),
-      validate: (value) => {
-        const pass = isGitUrl(value, { repository: true });
-        if (pass) {
-          return true;
-        }
-
-        return 'Please enter a valid github repo URL.';
-      },
-    },
-  ])
-  .then((answers) => {
-    try {
-      const data = fs.readFileSync(path.resolve(__dirname, '../templates/default.md'), 'utf8');
-      const { owner, name, repo } = parseGithubUrl(answers.githubURL);
-      const output = ejs.render(data, {
-        projectAuthor: answers.authorName,
-        projectAuthorGithubLink: `https://github.com/${owner}`,
-        projectAuthorUsername: owner,
-        projectDescription: packageJSON.description,
-        projectLicense: packageJSON.license,
-        projectName: name,
-        projectRepo: repo,
-        projectYear: new Date().getFullYear(),
-      });
-      fs.writeFileSync('README.md', output, { flag: 'a+' });
-      // eslint-disable-next-line no-console
-      console.log('🚀️ README created successfully!');
-    } catch (err) {
-      // eslint-disable-next-line no-console
-      console.error(err);
+try {
+  if (fs.existsSync(path.join(process.cwd(), 'package.json'))) {
+    const pathToPackageJson = path.resolve(process.cwd(), 'package.json');
+    const packageJson = fs.readFileSync(pathToPackageJson, 'utf8');
+    const { name, description, author, license } = JSON.parse(packageJson);
+    if (name) {
+      data.name = name;
     }
-  });
+    if (description) {
+      data.description = description;
+    }
+    if (author) {
+      data.author = author;
+    }
+    if (license) {
+      data.license = license;
+    }
+  }
+} catch (err) {
+  console.error(err);
+}
+
+try {
+  const pathToTemplate = path.resolve(__dirname, '../templates/default.md');
+  const template = fs.readFileSync(pathToTemplate, 'utf8');
+
+  if (origin.sync()) {
+    data.githubUrl = origin.sync();
+  }
+  const { owner, name, repo } = parseGithubUrl(data.githubUrl);
+  data.username = owner;
+  data.name = name;
+  data.repo = repo;
+
+  const output = ejs.render(template, data);
+
+  fs.writeFileSync('PREVIEW.md', output, { flag: 'a+' });
+  console.log('🚀️ README created successfully!');
+} catch (err) {
+  console.log(err);
+}
