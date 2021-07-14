@@ -1,3 +1,6 @@
+<p align="center">
+ <img alt="Project logo" height="80" src="https://raw.githubusercontent.com/iamsahebgiri/add-readme/main/static/add-readme.png">
+</p>
 <h1 align="center">Add Readme</h1>
 
 <div align="center">
@@ -8,14 +11,14 @@
 
 <div align="center">
   <a href="https://standardjs.com">
-    <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square"
+    <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat"
       alt="Standard" />
   </a>
-  <img src="https://img.shields.io/github/languages/code-size/iamsahebgiri/add-readme?style=flat-square" alt="Code size" />
+  <img src="https://img.shields.io/github/languages/code-size/iamsahebgiri/add-readme?style=flat" alt="Code size" />
 
-  <img src="https://img.shields.io/github/license/iamsahebgiri/add-readme?style=flat-square" alt="License" />
+  <img src="https://img.shields.io/github/license/iamsahebgiri/add-readme?style=flat" alt="License" />
 
-  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/iamsahebgiri/add-readme?style=flat-square">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/iamsahebgiri/add-readme?style=flat">
 
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/iamsahebgiri/add-readme?style=social">
 </div>
@@ -41,7 +44,7 @@ Run this followed commands:
 npx add-readme
 ```
 
-## 🌱 Acknoledgement
+## 🌱 Acknowledgement
 
 - [jonschlinkert](https://github.com/jonschlinkert/is-git-url)
 - [alferov](https://github.com/alferov/is-github-url)
@@ -49,7 +52,7 @@ npx add-readme
 ## 📚️ Roadmaps
 
 - [ ] Allow user to define their own template
-- [ ] Allow -y flag to bypass prompt
+- [ ] Select from a list of available templates
 
 ## ‎‍💻 Authors
 
