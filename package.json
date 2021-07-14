@@ -1,6 +1,6 @@
 {
   "name": "add-readme",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "✨ Create beautiful readme with just one CLI command!",
   "main": "src/index.js",
   "bin": "src/index.js",
@@ -24,13 +24,12 @@
   },
   "homepage": "https://github.com/iamsahebgiri/add-readme#readme",
   "devDependencies": {
-    "eslint": "^7.26.0",
+    "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.0"
+    "eslint-plugin-import": "^2.23.4"
   },
   "dependencies": {
     "ejs": "^3.1.6",
-    "inquirer": "^8.0.0",
     "remote-origin-url": "^2.0.0"
   }
 }
