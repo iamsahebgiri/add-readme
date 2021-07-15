@@ -30,7 +30,6 @@ CLI that generates beautiful designed `README.md` file with ease. Build to be fa
 
 ## 🎯 Features
 
-List of features
 
 - Generate readme fast
 - One command and done
